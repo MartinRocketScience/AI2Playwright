@@ -1,0 +1,21 @@
+{
+  "name": "ai2playwright",
+  "version": "1.0.0",
+  "description": "Demo server with Playwright tests and AI-powered locator identification",
+  "type": "commonjs",
+  "scripts": {
+    "start": "ts-node DemoServer/startServer.ts",
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.3.3",
+    "axios": "^1.7.9",
+    "hono": "^4.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.10.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
