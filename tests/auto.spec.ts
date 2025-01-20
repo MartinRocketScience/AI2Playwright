@@ -28,27 +28,13 @@ test.describe('Auto Command Tests', () => {
         }
     });
 
-    // test('should identify counter button locator', async ({ page }) => {
-    //     await page.goto(`http://localhost:${TEST_PORT}`);
-        
-    //     const autoCommand = new AutoCommand(page);
-    //     await autoCommand.auto('Click on counter button');
-    //     // await page.waitForTimeout(3000); // 3 second pause, just for preview
-    //     await autoCommand.auto('Type HELLO in search input');
-    //     // await page.waitForTimeout(3000); // 3 second pause agai ;-)
-    // });
-
-    test('test on google', async ({ page }) => {
-        await page.goto(`http://onet.pl`);
-        
-        // Wait for the cookie consent dialog to be visible and get its frame if it exists
-        const frame = page.frameLocator('iframe').first();
-        await page.waitForLoadState('networkidle');
+    test('should identify counter button locator', async ({ page }) => {
+        await page.goto(`http://localhost:${TEST_PORT}`);
         
         const autoCommand = new AutoCommand(page);
-        await autoCommand.auto('Find and click the button that has aria-label "accept and close"');
+        await autoCommand.auto('Click on counter button');
         // await page.waitForTimeout(3000); // 3 second pause, just for preview
-        // await autoCommand.auto('Type HELLO in search input');
+        await autoCommand.auto('Type HELLO in search input');
         // await page.waitForTimeout(3000); // 3 second pause agai ;-)
     });
 });
